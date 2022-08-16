@@ -6,6 +6,10 @@
   ],
   "listeners": [
     "committee.nova.scift.Scift",
-    "committee.nova.scift.ScalaAdapter"
+    {
+      "class": "committee.nova.scift.ScalaAdapter",
+      "priority": -2147483648,
+      "side": "both"
+    }
   ]
 }
