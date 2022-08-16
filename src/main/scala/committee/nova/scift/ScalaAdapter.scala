@@ -3,6 +3,7 @@ package committee.nova.scift
 import org.dimdev.riftloader.listener.Instantiator
 
 class ScalaAdapter extends Instantiator {
+  //However, scala "object" still seemed not to work
   override def newInstance[T](clazz: Class[T]): T = {
     val name = clazz.getName
     try {
@@ -12,10 +13,9 @@ class ScalaAdapter extends Instantiator {
       if (instance == null) throw new NullPointerException
       instance
     } catch {
-      case _: Exception => {
+      case _: Exception =>
         println(s"Unable to find ${name}$$MODULE$$")
         clazz.newInstance()
-      }
     }
   }
 }
