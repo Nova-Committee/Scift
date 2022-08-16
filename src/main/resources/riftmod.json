@@ -1,0 +1,11 @@
+{
+  "id": "scift",
+  "name": "Scift",
+  "authors": [
+    "Tapio"
+  ],
+  "listeners": [
+    "committee.nova.scift.Scift",
+    "committee.nova.scift.ScalaAdapter"
+  ]
+}

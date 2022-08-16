@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+        maven { url 'https://files.minecraftforge.net/maven' }
+    }
+    dependencies {
+        classpath 'com.github.unascribed:RiftGradle:73e7b0a'
+    }
+}
+
+plugins {
+    id "com.github.johnrengelman.shadow" version "4.0.4"
+    id 'scala'
+}
+
+apply plugin: 'net.minecraftforge.gradle.tweaker-client'
+apply plugin: 'java'
+
+group = "${group}"
+version = "${version}"
+archivesBaseName = "${filename}"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://www.dimdev.org/maven' }
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.unascribed.com' }
+}
+
+dependencies {
+    implementation 'com.github.unascribed:Rift:FINAL'
+    implementation "org.scala-lang:scala-library:${scala_lib}"
+    implementation "org.scala-lang.modules:scala-java8-compat_${java8_compact}"
+}
+
+minecraft {
+    version = '1.13.2'
+    mappings = 'snapshot_20181106'
+    runDir = 'run'
+    tweakClass = 'org.dimdev.riftloader.launch.RiftLoaderClientTweaker'
+}
+
+shadowJar {
+    classifier = ""
+    dependencies {
+        include(dependency("org.scala-lang:scala-library:${scala_lib}"))
+        include(dependency("org.scala-lang.modules:scala-java8-compat_${java8_compact}"))
+    }
+}
+
+tasks.build.dependsOn shadowJar
