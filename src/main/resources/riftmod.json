@@ -4,6 +4,7 @@
   "authors": [
     "Tapio"
   ],
+  "version": "1.0.0",
   "listeners": [
     "committee.nova.scift.Scift",
     {
@@ -11,5 +12,7 @@
       "priority": -2147483648,
       "side": "both"
     }
-  ]
+  ],
+  "description": "Provides Scala standard library for Rift.",
+  "icon_file": "scift.png"
 }

@@ -8,4 +8,3 @@ class Scift extends InitializationListener {
 
   override def onInitialization(): Unit = LOGGER.info("Scift activated!")
 }
-
