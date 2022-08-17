@@ -32,7 +32,8 @@ repositories {
 
 dependencies {
     implementation 'com.github.unascribed:Rift:FINAL'
-    implementation "org.scala-lang:scala3-library_3:${scala_lib}"
+    implementation "org.scala-lang:scala-library:${scala_lib}"
+    implementation "org.scala-lang:scala3-library_3:${scala3_lib}"
     implementation "org.scala-lang.modules:scala-java8-compat_${java8_compat}"
 }
 
@@ -46,7 +47,8 @@ minecraft {
 shadowJar {
     classifier = ""
     dependencies {
-        include(dependency("org.scala-lang:scala3-library_3:${scala_lib}"))
+        include(dependency("org.scala-lang:scala-library:${scala_lib}"))
+        include(dependency("org.scala-lang:scala3-library_3:${scala3_lib}"))
         include(dependency("org.scala-lang.modules:scala-java8-compat_${java8_compat}"))
     }
 }
