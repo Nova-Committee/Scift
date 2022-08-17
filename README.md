@@ -7,7 +7,7 @@ your Gradle build script:
 
 ```groovy
 plugins {
-    id 'scala' version '2.12.7'
+    id 'scala'
 }
 
 repositories {
@@ -15,6 +15,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.Nova-Committee:Scift:1.0.0'
+    implementation 'com.github.Nova-Committee:Scift:1.1.0'
 }
 ```
