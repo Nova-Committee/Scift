@@ -15,6 +15,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.Nova-Committee:Scift:1.1.0'
+    implementation 'com.github.Nova-Committee:Scift:2-1.1.0'
 }
 ```
