@@ -2,6 +2,8 @@
 
 ##### Scala runtime libraries for Rift
 
+Scala2? [Here](https://github.com/Nova-Committee/Scift/tree/Scala2 "Here").
+
 Scift provides the runtime and libraries required for creating Rift mods in Scala. For usage, append the following to
 your Gradle build script:
 
